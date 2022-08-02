@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 
 CATEGORY = (
-    ('Stattionary', 'stationary'),
-    ('Electronics', 'electronics'),
-    ('Food', 'food'),
+    ('Stationary', 'Stationary'),
+    ('Electronics', 'Electronics'),
+    ('Food', 'Food'),
 )
 
 
