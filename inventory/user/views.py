@@ -8,7 +8,7 @@ def register(request):
         form = CreateUSerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('dashboard-home')
+            return redirect('user-login')
     else:
         form = CreateUSerForm()
     context = {
