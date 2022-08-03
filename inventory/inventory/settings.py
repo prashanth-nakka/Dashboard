@@ -110,6 +110,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+MEDIA_URL = '/media/'
+
 LOGIN_REDIRECT_URL = 'dashboard-home'
 
 LOGIN_URL = 'user-login'
