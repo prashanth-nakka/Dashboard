@@ -1,6 +1,8 @@
 {% extends 'partials/base.html' %}
 {% block title %} Home - DJ-Inventory{%endblock title %}
 {% block content %}
+
+{% if user.is_authenticated and user.is_staff and user.is_superuser %}
 {% include 'partials/topnav.html' %}
 <!-- Graphs -->
 <div class="container">
@@ -104,4 +106,7 @@
   </div>
 </div>
 <!-- End Graphs -->
+{% else %}
+  {% include 'dashboard/staff_index.html' %}
+{% endif %}
 {% endblock content %}
