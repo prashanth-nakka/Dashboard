@@ -1,5 +1,5 @@
 {% extends 'partials/base.html' %}
-{% block title %}Login - User Login Page {% endblock title %}
+{% block title %}Profile - DJ-Inventory {% endblock title %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -13,7 +13,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <span class="h4"> Profile Information</span>
-                  <a class="btn btn-info btn-sm float-right" href="">Edit</a>
+                  <a class="btn btn-info btn-md float-right" href="{% url 'user-profile-update' %}">Edit</a>
                   <hr />
                   <table class="table bg-white table-borderless">
                     <tbody>
@@ -35,13 +35,6 @@
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div class="col-md-4">
-                  <img
-                    class="img-thumbnail"
-                    src="./media/profile-img1.jpg"
-                    alt=""
-                  />
                 </div>
               </div>
             </div>
