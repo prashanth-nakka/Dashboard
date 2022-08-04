@@ -6,6 +6,7 @@ CATEGORY = (
     ('Stationary', 'Stationary'),
     ('Electronics', 'Electronics'),
     ('Food', 'Food'),
+    ('Fashion', 'Fashion'),
 )
 
 
@@ -15,7 +16,6 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
     class Meta:
         verbose_name_plural = 'Product'
@@ -35,4 +35,3 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.product} ordered by {self.staff.username}'
-    
