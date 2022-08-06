@@ -6,12 +6,12 @@ from .forms import CreateUserForm, UpdateUserForm, ProfileUpdateForm
 
 def register(request):
     if request.method == 'POST':
-        form = CreateUSerForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('user-login')
     else:
-        form = CreateUSerForm()
+        form = CreateUserForm()
     context = {
         'form': form,
     }
